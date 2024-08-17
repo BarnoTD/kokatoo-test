@@ -84,8 +84,14 @@ export default function SideNav({ children }: { children: React.ReactNode }) {
             </SheetTrigger>
             <SheetContent side="left" className="flex flex-col">
               <nav className="grid gap-2 text-lg font-medium">
-                <Link href="#" className="flex items-center gap-2 text-lg font-semibold mb-6" prefetch={false}>
-                  <Package2Icon className="h-6 w-6" />
+                <Link href="#" className="flex items-center gap-4 text-lg font-semibold mb-6" prefetch={false}>
+                <Image 
+                src="/Logo.svg"
+                width={24}
+                height={24}
+                className=""
+                alt=""
+              />
                   <span className="">Kokatoo</span>
                 </Link>
                 <Link
