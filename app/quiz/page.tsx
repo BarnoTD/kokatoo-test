@@ -44,7 +44,7 @@ export default function CardWithForm() {
           <CardTitle>Personal Information</CardTitle>
           <CardDescription>
             Please specify some information for the quiz to be accurate. We
-            won't record anything!
+            won&apos;t record anything!
           </CardDescription>
         </CardHeader>
         <CardContent>
