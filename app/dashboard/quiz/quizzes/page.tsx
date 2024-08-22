@@ -5,10 +5,29 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import { Button } from "@/components/ui/button"
 import { ClockIcon, BookOpenIcon, PersonStanding } from "lucide-react"
 
-export default function Page() {
-  const [selectedTest, setSelectedTest] = useState(null)
+interface Test {
+  id: number;
+  title: string;
+  description: string;
+  long_description: string;
+  duration: string;
+  questions: number;
+  ageGroup: string;
+  difficulty: 'Easy' | 'Medium' | 'Hard' | 'Challenging';
+}
 
-  const tests = [
+interface TestSelectionProps {
+  tests: Test[];
+}
+
+export default function Page() {
+  const [selectedTest, setSelectedTest] = useState<Test | null>(null)
+
+  const handleTestSelect = (test: Test) => {
+    setSelectedTest(test)
+  }
+
+  const testsData: Test[] = [
     {
         id: 1,
         title: "Worry Busters Quiz",
@@ -87,11 +106,11 @@ export default function Page() {
         <h2 className="text-xl sm:text-2xl font-bold p-4 border-b">Available Tests</h2>
         <ScrollArea className="h-50 sm:h-[calc(100vh-8rem)]">
           <div className="p-2 space-y-2">
-            {tests.map((test) => (
+            {testsData.map((test) => (
               <Card 
                 key={test.id} 
                 className={`w-full cursor-pointer transition-colors ${selectedTest?.id === test.id ? 'bg-muted' : ''}`}
-                onClick={() => setSelectedTest(test)}
+                onClick={() => handleTestSelect(test)}
               >
                 <CardHeader className="p-4">
                   <CardTitle className="text-base sm:text-lg">{test.title}</CardTitle>
