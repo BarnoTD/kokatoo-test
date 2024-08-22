@@ -21,9 +21,10 @@ import {
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Slider } from "@/components/ui/slider";
 import { Input } from "@/components/ui/input";
+import Link from "next/link";
 
 export default function CardWithForm() {
-  const [age, setAge] = useState<number>(18);
+  const [age, setAge] = useState<number>(5);
 
   // Handle changes from the Slider
   const handleSliderChange = (value: number[]) => {
@@ -34,6 +35,7 @@ export default function CardWithForm() {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let newAge = parseInt(e.target.value);
     if (newAge > 30) newAge = 30;
+    if (newAge < 5) newAge = 5;
     setAge(newAge);
   };
 
@@ -72,7 +74,8 @@ export default function CardWithForm() {
                 <div className="flex space-x-10">
                   <Slider
                     value={[age]}
-                    max={30}
+                    max={17}
+                    min={5}
                     step={1}
                     onValueChange={handleSliderChange} 
                     className="color-muted"
@@ -94,8 +97,16 @@ export default function CardWithForm() {
           </form>
         </CardContent>
         <CardFooter className="flex justify-between">
-          <Button variant="outline">Cancel</Button>
-          <Button className="bg-muted text-black">Take Quiz</Button>
+          <Button variant="outline">
+            <Link href="/dashboard">
+            Cancel
+            </Link>  
+          </Button>
+          <Button className="bg-muted text-black">
+            <Link href="/dashboard/quiz/quizzes">
+              Start
+            </Link>
+          </Button>
         </CardFooter>
       </Card>
     </div>
