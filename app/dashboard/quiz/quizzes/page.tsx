@@ -4,6 +4,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/com
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Button } from "@/components/ui/button"
 import { ClockIcon, BookOpenIcon, PersonStanding } from "lucide-react"
+import Link from 'next/link'
 
 interface Test {
   id: number;
@@ -146,7 +147,7 @@ export default function Page() {
                 </CardContent>
               </Card>
             </div>
-            <Button size="lg" className='w-fit self-center bg-muted text-black '>Start Test</Button>
+            <Button size="lg" className='w-fit self-center bg-muted text-black '> <Link href="/dashboard/quiz/quizzes/open">Start Test</Link> </Button>
           </div>
         ) : (
           <div className="flex items-center justify-center h-full text-muted-foreground">
