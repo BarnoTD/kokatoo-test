@@ -32,7 +32,7 @@ export default function Page() {
             </Card>
             <div className="answers grid grid-cols-2 grid-rows-2 w-1/2 gap-2 *:bg-yellow-500">
             {
-                Test[question].choices.map((choice) => (<Button className=" h-fit whitespace-break-spaces" onClick={handleChoice}>{choice}</Button>))
+                Test[question].choices.map((choice,index) => (<Button className=" h-fit whitespace-break-spaces" key={index} onClick={handleChoice}>{choice}</Button>))
             }
             </div>
             </div>
