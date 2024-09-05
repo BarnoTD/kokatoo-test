@@ -75,7 +75,7 @@ export default function SideNav({ children }: { children: React.ReactNode }) {
                     className={clsx(
                       "flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all",
                       {
-                        "bg-muted text-primary": pathname === link.href,
+                        "bg-muted text-primary": pathname === link.href || (pathname.includes("/dashboard/quiz") && link.href ==="/dashboard/quiz"),
                         "hover:text-primary": pathname !== link.href
                       }
                     )}
