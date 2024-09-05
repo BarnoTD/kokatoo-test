@@ -26,16 +26,11 @@ import Link from "next/link";
 export default function CardWithForm() {
   const [age, setAge] = useState<number>(5);
 
-  // Handle changes from the Slider
-  const handleSliderChange = (value: number[]) => {
-    setAge(value[0]);
-  };
 
   // Handle changes from the Input
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let newAge = parseInt(e.target.value);
-    if (newAge > 30) newAge = 30;
-    if (newAge < 5) newAge = 5;
+    if (newAge > 17) newAge = 17;
     setAge(newAge);
   };
 
@@ -72,17 +67,8 @@ export default function CardWithForm() {
               <div className="flex flex-col space-y-3">
                 <Label htmlFor="age">Please enter your age:</Label>
                 <div className="flex space-x-10">
-                  <Slider
-                    value={[age]}
-                    max={17}
-                    min={5}
-                    step={1}
-                    onValueChange={handleSliderChange} 
-                    className="color-muted"
-                  />
                   <Input
                     className="w-20"
-                    type="number"
                     value={age}
                     onChange={handleInputChange}
                   />
