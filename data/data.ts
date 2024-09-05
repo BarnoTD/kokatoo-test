@@ -31,7 +31,8 @@ export const testsData: Test[] = [
             { title: "do you have an imaginary friend?", choices: ["Yes", "Maybe","No"] },
             { title: "do you have an imaginary friend?", choices: ["Yes", "No"] },
             { title: "do you have an imaginary friend?", choices: ["Yes", "No"] },
-          
+            { title: "do you have an imaginary friend?", choices: ["Yes", "No"] },
+            { title: "do you have an imaginary friend?", choices: ["Yes", "No"] },
           ]
       },
       {

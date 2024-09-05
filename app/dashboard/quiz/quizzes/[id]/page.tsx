@@ -11,11 +11,9 @@ import { Button } from "@/components/ui/button";
 import { Test, testsData } from "@/data/data";
 import { useState } from "react";
 
-//FIXED
-import { useSearchParams } from "next/navigation";
-export default function Page() {
+export default function Page({ params }: { params: { id: string } }) {
 
-    const testId  = Number(useSearchParams().get('testId'));
+    const testId = Number(params.id);
   
     const test : Test = testsData.find(test => test.id === testId)! ;
 

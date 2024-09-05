@@ -91,10 +91,7 @@ export default function Page() {
             >
               
               <Link
-                href={{
-                  pathname: "/dashboard/quiz/quizzes/open",
-                  query: { testId: selectedTest.id },
-                }}
+                href={`/dashboard/quiz/quizzes/${selectedTest.id}`}
               >
                 Start Test
               </Link>
