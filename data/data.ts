@@ -12,7 +12,7 @@ export interface Test {
     questions: number;
     ageGroup: string;
     difficulty: 'Easy' | 'Medium' | 'Hard' | 'Challenging';
-    test : Question[]
+    content : Question[]
   }
 
 export const testsData: Test[] = [
@@ -25,7 +25,7 @@ export const testsData: Test[] = [
         questions: 25,
         ageGroup: "7-12 years",
         difficulty: "Easy",
-        test: [
+        content: [
             { title: "do you have an imaginary friend?", choices: ["Yes", "No"] },
             { title: "do you find it easy to make new friends?", choices: ["Yes", "No"] },
             { title: "do you have an imaginary friend?", choices: ["Yes", "Maybe","No"] },
@@ -43,7 +43,7 @@ export const testsData: Test[] = [
         questions: 30,
         ageGroup: "8-14 years",
         difficulty: "Medium",
-        test: [
+        content: [
             { title: "do you have an imaginary friend?", choices: ["Yes", "No"] },
             { title: "do you find it easy to make new friends?", choices: ["Yes", "No"] },
             { title: "do you have an imaginary friend?", choices: ["Yes", "Maybe","No"] },
@@ -61,7 +61,7 @@ export const testsData: Test[] = [
         questions: 20,
         ageGroup: "9-15 years",
         difficulty: "Medium",
-        test: [
+        content: [
             { title: "do you have an imaginary friend?", choices: ["Yes", "No"] },
             { title: "do you find it easy to make new friends?", choices: ["Yes", "No"] },
             { title: "do you have an imaginary friend?", choices: ["Yes", "Maybe","No"] },
@@ -79,7 +79,7 @@ export const testsData: Test[] = [
         questions: 28,
         ageGroup: "6-12 years",
         difficulty: "Easy",
-        test: [
+        content: [
             { title: "do you have an imaginary friend?", choices: ["Yes", "No"] },
             { title: "do you find it easy to make new friends?", choices: ["Yes", "No"] },
             { title: "do you have an imaginary friend?", choices: ["Yes", "Maybe","No"] },
@@ -97,7 +97,7 @@ export const testsData: Test[] = [
         questions: 40,
         ageGroup: "5-10 years",
         difficulty: "Challenging",
-        test: [
+        content: [
             { title: "do you have an imaginary friend?", choices: ["Yes", "No"] },
             { title: "do you find it easy to make new friends?", choices: ["Yes", "No"] },
             { title: "do you have an imaginary friend?", choices: ["Yes", "Maybe","No"] },
@@ -115,7 +115,7 @@ export const testsData: Test[] = [
         questions: 25,
         ageGroup: "6-13 years",
         difficulty: "Medium",
-        test: [
+        content: [
             { title: "do you have an imaginary friend?", choices: ["Yes", "No"] },
             { title: "do you find it easy to make new friends?", choices: ["Yes", "No"] },
             { title: "do you have an imaginary friend?", choices: ["Yes", "Maybe","No"] },
@@ -133,7 +133,7 @@ export const testsData: Test[] = [
         questions: 30,
         ageGroup: "8-16 years",
         difficulty: "Challenging",
-        test: [
+        content: [
             { title: "do you have an imaginary friend?", choices: ["Yes", "No"] },
             { title: "do you find it easy to make new friends?", choices: ["Yes", "No"] },
             { title: "do you have an imaginary friend?", choices: ["Yes", "Maybe","No"] },
