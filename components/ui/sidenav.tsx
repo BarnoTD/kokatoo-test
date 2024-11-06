@@ -9,7 +9,6 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
-import { Input } from "@/components/ui/input";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -160,7 +159,7 @@ export default function SideNav({ children }: { children: React.ReactNode }) {
             </DropdownMenuContent>
           </DropdownMenu>
         </header>
-        <div className="flex flex-1 flex-col gap-4 lg:gap-6 ">
+        <div className="flex flex-1 flex-col justify-center gap-4 lg:gap-6 ">
           {children}
         </div>
       </div>
