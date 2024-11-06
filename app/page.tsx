@@ -185,7 +185,7 @@ export default function Home() {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <p className="mb-4">"{testimonial.quote}"</p>
+                  <p className="mb-4">&quot;{testimonial.quote}&quot;</p>
                   <p className="font-semibold">{testimonial.name}</p>
                 </motion.div>
               ))}

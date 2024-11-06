@@ -66,7 +66,7 @@ export default function Page({ params }: { params: { id: string } }) {
     return (
       <RadioGroup defaultValue="likert" className="flex gap-5 justify-center">
 
-      {Array.from({length:10}, (_,i) => (<div className="flex flex-col items-center space-y-2">
+      {Array.from({length:10}, (_,i) => (<div className="flex flex-col items-center space-y-2" key={i}>
         <RadioGroupItem value={i.toString()} id={`r${i}`} onClick={() => {handleClick(i+1)}}/>
         <Label htmlFor={`r${i}`}>{i}</Label>
       </div>))}
